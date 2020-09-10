@@ -38,9 +38,14 @@
         SELECT * FROM manager WHERE id =#{id}
     </select>
 
-    <!-- 查询从start位置开始的count条数据-->
+<!--    &lt;!&ndash; 查询从start位置开始的count条数据&ndash;&gt;-->
+<!--    <select id="list" resultMap="manager">-->
+<!--        SELECT * FROM manager ORDER BY id desc limit #{param1}, #{param2}-->
+<!--    </select>-->
+
+    <!-- 查询全部管理员相关数据-->
     <select id="list" resultMap="manager">
-        SELECT * FROM manager ORDER BY id desc limit #{param1}, #{param2}
+        SELECT * FROM manager ORDER BY id desc
     </select>
 
 </mapper>

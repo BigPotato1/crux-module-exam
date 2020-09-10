@@ -11,8 +11,8 @@
     <title>manager</title>
 </head>
 <body>
-    id:${requestScope.manager.id}<br/>
-    pwd:${requestScope.manager.pwd}<br/>
-    name:${requestScope.manager.name}<br/>
+    id:${requestScope.manager3.id}<br/>
+    pwd:${requestScope.manager3.pwd}<br/>
+    name:${requestScope.manager3.name}<br/>
 </body>
 </html>
