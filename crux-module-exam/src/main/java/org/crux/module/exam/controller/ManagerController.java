@@ -19,10 +19,18 @@ import java.util.List;
 
     @RequestMapping("/Login")
     public ModelAndView selectUser() throws Exception {
+        //查询所有管理员的信息
+        List<Manager> allManager=managerService.list();
+        for (Manager singManager:allManager) {
+            System.out.print(singManager.getId()+"\t");
+            System.out.print(singManager.getPwd()+"\t");
+            System.out.println(singManager.getName());
+        }
+
         ModelAndView mv = new ModelAndView();
         Manager manager = managerService.selectManager(1);
-        List<Manager> allManager=managerService.list();
         mv.addObject("manager3", manager);   //此处左侧 “manager” 是对应view层文件里面用来接收右侧 manager 变量的变量名
+        mv.addObject("allManager", allManager);
         mv.setViewName("manager");  //此处的 “manager” 是对应view层文件名
         return mv;
     }

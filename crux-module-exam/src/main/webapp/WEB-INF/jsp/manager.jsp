@@ -14,5 +14,13 @@
     id:${requestScope.manager3.id}<br/>
     pwd:${requestScope.manager3.pwd}<br/>
     name:${requestScope.manager3.name}<br/>
+
+    <c:forEach items="${allManager}" var="list">
+        <tr>
+            <td>${requestScope.list.username}</td>
+            <td>${requestScope.list.codenum}</td>
+            <td>${requestScope.list.address}</td>
+        </tr>
+    </c:forEach>
 </body>
 </html>
