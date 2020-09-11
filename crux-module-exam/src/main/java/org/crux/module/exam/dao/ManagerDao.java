@@ -15,6 +15,6 @@ public interface ManagerDao {
     void updateManager(Manager manager);
     Manager selectManager(int id);
 //    List<Manager> list(int start,int count);
-    List<Manager> list();
+    List<Manager> listManager();
 
 }

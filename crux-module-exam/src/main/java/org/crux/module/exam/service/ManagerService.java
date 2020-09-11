@@ -37,10 +37,9 @@ public class ManagerService {
 //        return managerDao.list(start,count);
 //    }
 
-    public List<Manager> list() {
-        return managerDao.list();
-    }
-
     //查询所有管理员的信息
+    public List<Manager> listManager() {
+        return managerDao.listManager();
+    }
 
 }

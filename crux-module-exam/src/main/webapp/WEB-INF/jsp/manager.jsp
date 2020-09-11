@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>manager</title>
@@ -14,13 +15,29 @@
     id:${requestScope.manager3.id}<br/>
     pwd:${requestScope.manager3.pwd}<br/>
     name:${requestScope.manager3.name}<br/>
+    <br/>
+    <br/>
+    <br/>
 
-    <c:forEach items="${allManager}" var="list">
-        <tr>
-            <td>${requestScope.list.username}</td>
-            <td>${requestScope.list.codenum}</td>
-            <td>${requestScope.list.address}</td>
-        </tr>
+<%--    <c:forEach items="${requestScope.allManager}" var="list">--%>
+<%--    <table border="1">--%>
+<%--        <tr>--%>
+<%--            <td>${list.id}</td>--%>
+<%--            <td>${list.pwd}</td>--%>
+<%--            <td>${list.name}</td>--%>
+<%--        </tr>--%>
+<%--    </table>--%>
+<%--    </c:forEach>--%>
+
+    <%--    <br/> 表示换行  --%>
+    ${requestScope.message}<br/>
+    <br/>
+
+    <c:forEach items="${requestScope.allManager3}" var="list">
+            ${list.id}
+            ${list.pwd}
+            ${list.name}<br/>
     </c:forEach>
+
 </body>
 </html>
