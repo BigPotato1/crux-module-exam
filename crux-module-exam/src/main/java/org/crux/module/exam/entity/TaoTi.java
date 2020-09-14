@@ -6,7 +6,7 @@ public class TaoTi {
 
     private int id;   //套题ID号
     private int lessonId;   //套题所属课程ID号
-    private String name;   //套题名字
+    private String nameT;   //套题名字
     private Date joinTime;
 
     public int getId() {
@@ -25,12 +25,12 @@ public class TaoTi {
         this.lessonId = lessonId;
     }
 
-    public String getName() {
-        return name;
+    public String getNameT() {
+        return nameT;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameT(String name) {
+        this.nameT = name;
     }
 
     public Date getJoinTime() {

@@ -9,6 +9,9 @@ public class StuResult {
     private int resMore;   //考试结果多选得分
     private int resTotal;   //考试结果总得分
 
+    private Student student;
+    private TaoTi taoTi;
+
     public int getId() {
         return id;
     }
@@ -57,4 +60,19 @@ public class StuResult {
         this.resTotal = resTotal;
     }
 
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
+    }
+
+    public TaoTi getTaoTi() {
+        return taoTi;
+    }
+
+    public void setTaoTi(TaoTi taoTi) {
+        this.taoTi = taoTi;
+    }
 }

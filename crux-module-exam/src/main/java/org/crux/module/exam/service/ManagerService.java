@@ -42,4 +42,6 @@ public class ManagerService {
         return managerDao.listManager();
     }
 
+    //查询学生成绩
+
 }

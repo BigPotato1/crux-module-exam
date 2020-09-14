@@ -10,7 +10,7 @@
         <result column="name" property="name"/>
     </resultMap>
 
-    <!--     id="方法名“ ；resultType=”返回值类型“ ；parameterType=”输入参数类型“-->
+    <!-- id="方法名“ ；resultType=”返回值类型“ ；parameterType=”输入参数类型“-->
 
     <!-- 查询数据总条目 -->
     <select id="getTotal" resultType="int">
@@ -23,12 +23,12 @@
     </insert>
 
     <!-- 删除一条数据 -->
-    <delete id="deleteStudent" parameterType="int">
+    <delete id="deleteManager" parameterType="int">
         DELETE FROM manager WHERE id = #{id}
     </delete>
 
     <!-- 更新一条数据 -->
-    <update id="updateStudent" parameterType="Student">
+    <update id="updateManager" parameterType="Manager">
         UPDATE manager SET id = #{id}, pwd = #{pwd},
                            name = #{name} WHERE id = #{id}
     </update>
@@ -45,7 +45,8 @@
 
     <!-- 查询全部管理员相关数据-->
     <select id="listManager" resultMap="manager">
-        SELECT * FROM manager ORDER BY id desc
+        <!--SELECT * FROM manager ORDER BY id desc-->
+        SELECT * FROM manager ORDER BY id
     </select>
 
 </mapper>

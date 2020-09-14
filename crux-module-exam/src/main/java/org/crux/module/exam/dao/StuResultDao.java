@@ -20,5 +20,6 @@ public interface StuResultDao {
     void updateStuResult(StuResult stuResult);
     StuResult selectStuResult(int id);
     List<StuResult> list(int start, int count);
+    List<StuResult> listStuResult();
 
 }
