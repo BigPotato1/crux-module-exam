@@ -18,6 +18,7 @@ public interface QuestionDao {
     void deleteQuestion(int id);
     void updateQuestion(Question question);
     Question selectQuestion(int id);
-    List<Question> list(int start, int count);
+    List<Question> listQuestion();
+    List<Question> listTaoTiQuestion();
 
 }

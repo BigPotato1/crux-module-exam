@@ -4,11 +4,11 @@
 <!-- 设置为ManagerDao接口方法提供sql语句配置 -->
 <mapper namespace="org.crux.module.exam.dao.ManagerDao">
 
-    <resultMap id="manager" type="manager">
-        <id column="id" property="id"/>
-        <result column="pwd" property="pwd"/>
-        <result column="name" property="name"/>
-    </resultMap>
+<!--    <resultMap id="manager" type="manager">-->
+<!--        <id column="id" property="id"/>-->
+<!--        <result column="pwd" property="pwd"/>-->
+<!--        <result column="name" property="name"/>-->
+<!--    </resultMap>-->
 
     <!-- id="方法名“ ；resultType=”返回值类型“ ；parameterType=”输入参数类型“-->
 
@@ -44,7 +44,9 @@
 <!--    </select>-->
 
     <!-- 查询全部管理员相关数据-->
-    <select id="listManager" resultMap="manager">
+    <!-- 此处的单表查询用“resultType”更简洁-->
+<!--    <select id="listManager" resultMap="manager">-->
+    <select id="listManager" resultType="manager">
         <!--SELECT * FROM manager ORDER BY id desc-->
         SELECT * FROM manager ORDER BY id
     </select>

@@ -13,6 +13,8 @@ public class Question {
     private String optionA;   //A...
     private String answer;    //问题答案
 
+    private TaoTi taoTi;
+
     public int getId() {
         return id;
     }
@@ -93,4 +95,11 @@ public class Question {
         this.answer = answer;
     }
 
+    public TaoTi getTaoTi() {
+        return taoTi;
+    }
+
+    public void setTaoTi(TaoTi taoTi) {
+        this.taoTi = taoTi;
+    }
 }

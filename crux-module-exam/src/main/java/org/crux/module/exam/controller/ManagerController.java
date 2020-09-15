@@ -23,6 +23,7 @@ import java.util.List;
         return mv;
     }
 
+    //管理员登录
     @Autowired    //推荐用构造器注入或set方法注入代替该变量注入
     ManagerService managerService;
     @RequestMapping("/Login")
@@ -51,12 +52,12 @@ import java.util.List;
         return mv;
     }
 
+    //查询所有学生的各科成绩
     @Autowired    //推荐用构造器注入或set方法注入代替该变量注入
     StuResultService stuResultService;
-    //查询所有学生的各科成绩
     @RequestMapping("/AllStuResult")
     public ModelAndView selectAllStuResult() throws Exception {
-        //查询所有学生的各科成绩
+        //打印所有学生的各科成绩
         List<StuResult> allStuResult=stuResultService.listStuResult();
 //        for (StuResult stuResult:allStuResult) {
 //            System.out.print(stuResult.getId()+"\t");

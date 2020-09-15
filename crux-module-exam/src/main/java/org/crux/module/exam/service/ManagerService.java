@@ -29,6 +29,7 @@ public class ManagerService {
         managerDao.updateManager(manager);
     }
 
+    //查询管理员的个人信息
     public Manager selectManager(int id) {
         return managerDao.selectManager(id);
     }
@@ -42,6 +43,5 @@ public class ManagerService {
         return managerDao.listManager();
     }
 
-    //查询学生成绩
 
 }

@@ -14,13 +14,12 @@ import java.util.List;
 @Service
 public class StuResultService {
 
-    //管理员查询考生成绩
+    //管理员查询考生成绩服务
     @Resource
     StuResultDao stuResultDao;
     public List<StuResult> listStuResult() {
         return stuResultDao.listStuResult();
     }
 
-
-    //考生查询自己的成绩
+    //考生查询个人成绩服务
 }
