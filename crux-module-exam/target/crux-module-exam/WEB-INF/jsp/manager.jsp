@@ -12,12 +12,12 @@
     <title>manager</title>
 </head>
 <body>
-    id:${requestScope.manager3.id}<br/>
-    pwd:${requestScope.manager3.pwd}<br/>
-    name:${requestScope.manager3.name}<br/>
-    <br/>
-    <br/>
-    <br/>
+<%--    id:${requestScope.manager3.id}<br/>--%>
+<%--    pwd:${requestScope.manager3.pwd}<br/>--%>
+<%--    name:${requestScope.manager3.name}<br/>--%>
+<%--    <br/>--%>
+<%--    <br/>--%>
+<%--    <br/>--%>
 
 <%--    <c:forEach items="${requestScope.allManager}" var="list">--%>
 <%--    <table border="1">--%>
@@ -29,15 +29,16 @@
 <%--    </table>--%>
 <%--    </c:forEach>--%>
 
-    <%--    <br/> 表示换行  --%>
-    ${requestScope.message}<br/>
-    <br/>
+<%--    &lt;%&ndash;    <br/> 表示换行  &ndash;%&gt;--%>
+<%--    ${requestScope.message}<br/>--%>
+<%--    <br/>--%>
 
-    <c:forEach items="${requestScope.allManager3}" var="list">
-            ${list.id}
-            ${list.pwd}
-            ${list.name}<br/>
-    </c:forEach>
+<%--    <c:forEach items="${requestScope.allManager3}" var="list">--%>
+<%--            ${list.id}--%>
+<%--            ${list.pwd}--%>
+<%--            ${list.name}<br/>--%>
+<%--    </c:forEach>--%>
 
+    <a href="http://localhost:8080/Manager/Login">管理员账号登录</a>
 </body>
 </html>
