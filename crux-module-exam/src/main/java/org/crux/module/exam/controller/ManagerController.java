@@ -2,6 +2,7 @@ package org.crux.module.exam.controller;
 
 import org.crux.module.exam.entity.Manager;
 import org.crux.module.exam.entity.StuResult;
+import org.crux.module.exam.entity.Student;
 import org.crux.module.exam.service.ManagerService;
 import org.crux.module.exam.service.StuResultService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,11 +28,36 @@ import java.util.List;
     @Autowired    //推荐用构造器注入或set方法注入代替该变量注入
     ManagerService managerService;
     @RequestMapping("/Login")
-    public ModelAndView selectUser() throws Exception {
+//    public ModelAndView selectUser() throws Exception {
+//        ModelAndView mv = new ModelAndView();
+//        Manager manager = managerService.selectManager(1);
+//        mv.addObject("manager3", manager);   //此处左侧 “manager3” 是对应view层文件里面用来接收右侧 manager 变量的变量名
+//        mv.setViewName("login");  //此处的 “login” 是对应view层文件名
+//        return mv;
+//    }
+    public ModelAndView login(String name,String pwd) throws Exception {
+        System.out.println(name);
+        System.out.println(pwd);
+        //先判断用户输入的登录名是否合法，即是否属于数据库里已有用户名
+        List<Manager> allManager=managerService.listManager();
+        for (Manager manager:allManager){
+            if (!manager.getName().equals(name)) {
+                continue;
+            } else {
+                //再判断登录密码是否正确
+                if(manager.getPwd().equals(pwd)){
+                    ModelAndView mv = new ModelAndView();
+                    mv.addObject("manager3", manager);
+                    mv.setViewName("managerHomePage");
+                    return mv;
+                }
+                ModelAndView mv = new ModelAndView();
+                mv.setViewName("managerLoginError");
+                return mv;
+            }
+        }
         ModelAndView mv = new ModelAndView();
-        Manager manager = managerService.selectManager(1);
-        mv.addObject("manager3", manager);   //此处左侧 “manager3” 是对应view层文件里面用来接收右侧 manager 变量的变量名
-        mv.setViewName("login");  //此处的 “login” 是对应view层文件名
+        mv.setViewName("managerLoginError");
         return mv;
     }
 

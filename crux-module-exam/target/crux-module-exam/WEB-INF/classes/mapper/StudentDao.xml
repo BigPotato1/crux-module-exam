@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.crux.module.exam.dao.StudentDao">
+    <!-- 查询一条数据 -->
+    <select id="selectStudent" resultType="Student" parameterType="String">
+        SELECT * FROM student WHERE name =#{name}
+    </select>
+
+    <select id="listStudent" resultType="Student">
+        SELECT * FROM student
+    </select>
 
 </mapper>

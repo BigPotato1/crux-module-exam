@@ -17,7 +17,7 @@ public interface StudentDao {
     void addStudent(Student student);
     void deleteStudent(int id);
     void updateStudent(Student student);
-    Student selectStudent(int id);
-    List<Student> list(int start, int count);
+    Student selectStudent(String name);
+    List<Student> listStudent();
 
 }

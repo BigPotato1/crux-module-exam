@@ -12,33 +12,16 @@
     <title>manager</title>
 </head>
 <body>
-<%--    id:${requestScope.manager3.id}<br/>--%>
-<%--    pwd:${requestScope.manager3.pwd}<br/>--%>
-<%--    name:${requestScope.manager3.name}<br/>--%>
-<%--    <br/>--%>
-<%--    <br/>--%>
-<%--    <br/>--%>
-
-<%--    <c:forEach items="${requestScope.allManager}" var="list">--%>
-<%--    <table border="1">--%>
-<%--        <tr>--%>
-<%--            <td>${list.id}</td>--%>
-<%--            <td>${list.pwd}</td>--%>
-<%--            <td>${list.name}</td>--%>
-<%--        </tr>--%>
-<%--    </table>--%>
-<%--    </c:forEach>--%>
-
-<%--    &lt;%&ndash;    <br/> 表示换行  &ndash;%&gt;--%>
-<%--    ${requestScope.message}<br/>--%>
-<%--    <br/>--%>
-
-<%--    <c:forEach items="${requestScope.allManager3}" var="list">--%>
-<%--            ${list.id}--%>
-<%--            ${list.pwd}--%>
-<%--            ${list.name}<br/>--%>
-<%--    </c:forEach>--%>
-
-    <a href="http://localhost:8080/Manager/Login">管理员账号登录</a>
+    管理员登录<br/>
+    <br/>
+    <form action="http://localhost:8080/Manager/Login" method="post">
+        用户名:<br>
+        <input type="text" name="name">
+        <br>
+        密码:<br>
+        <input type="text" name="pwd">
+        <br><br>
+        <input type="submit" value="登录">
+    </form>
 </body>
 </html>
