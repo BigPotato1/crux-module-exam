@@ -12,29 +12,51 @@
     <title>开始考试</title>
 </head>
 <body>
-    ${requestScope.TaoTiQuestion[0].taoTi.nameT}<br/>
+    ${requestScope.taoTiQuestion[0].taoTi.nameT}<br/>
     <br/>
     总共2题共100分<br/>
     <br/>
-    一.${requestScope.TaoTiQuestion[0].type}<br/>
-    <c:forEach items="${requestScope.TaoTiQuestion}" var="list" varStatus="s">
+    一.${requestScope.taoTiQuestion[0].type}<br/>
+<%--    <c:forEach items="${requestScope.TaoTiQuestion}" var="list" varStatus="s">--%>
+<%--        ${s.count}.         <!--varStatus="s"到s.count可产生自增序号-->--%>
+<%--        ${list.subject}<br/>--%>
+<%--        <form id="form${s.count}" action="http://localhost:8080/Student/endExam" method="post">--%>
+<%--&lt;%&ndash;            <input type="radio" checked="checked" name="option" value="A" />&ndash;%&gt;--%>
+<%--            <input type="radio" name="question${s.count}" value="A" />--%>
+<%--                ${list.optionA}<br/>--%>
+<%--            <input type="radio" name="question${s.count}" value="B" />--%>
+<%--                ${list.optionB}<br/>--%>
+<%--            <input type="radio" name="question${s.count}" value="C" />--%>
+<%--                ${list.optionC}<br/>--%>
+<%--            <input type="radio" name="question${s.count}" value="D" />--%>
+<%--                ${list.optionD}<br/>--%>
+<%--            <br/>--%>
+<%--            <input type="submit" value="提交">--%>
+<%--        </form>--%>
+<%--    </c:forEach>--%>
+<%--    <input type="button" value="Click Me!" onclick="submitForms()" />--%>
+<%--    <script>--%>
+<%--    submitForms = function(){--%>
+<%--        document.getElementById("form2").submit();--%>
+<%--        document.getElementById("form1").submit();--%>
+<%--    }--%>
+<%--    </script>--%>
+
+    <form action="http://localhost:8080/Student/endExam" method="post">
+    <c:forEach items="${requestScope.taoTiQuestion}" var="list" varStatus="s">
         ${s.count}.         <!--varStatus="s"到s.count可产生自增序号-->
         ${list.subject}<br/>
-<%--        <form action="http://localhost:8080/Student/endExam" method="post">--%>
-        <form>
-<%--            <input type="radio" checked="checked" name="option" value="A" />--%>
-            <input type="radio" name="option" value="A" />
+            <input type="radio" name="question${s.count}" value="A" />
                 ${list.optionA}<br/>
-            <input type="radio" name="option" value="B" />
+            <input type="radio" name="question${s.count}" value="B" />
                 ${list.optionB}<br/>
-            <input type="radio" name="option" value="C" />
+            <input type="radio" name="question${s.count}" value="C" />
                 ${list.optionC}<br/>
-            <input type="radio" name="option" value="D" />
+            <input type="radio" name="question${s.count}" value="D" />
                 ${list.optionD}<br/>
             <br/>
-            <input type="submit" value="提交">
-        </form>
     </c:forEach>
-
+    <input type="submit" value="提交">
+    </form>
 </body>
 </html>
