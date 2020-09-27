@@ -2,7 +2,7 @@ package org.crux.module.exam.entity;
 
 public class Question {
 
-    private int ID;   //题目ID号
+    private int id;   //题目ID号
     private int taoTiId;   //题目所属套题ID号
     private int lessonId;   //题目所属课程ID号
     private String type;   //题目类型：单选，多选
@@ -13,12 +13,14 @@ public class Question {
     private String optionA;   //A...
     private String answer;    //问题答案
 
-    public int getID() {
-        return ID;
+    private TaoTi taoTi;
+
+    public int getId() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getTaoTiId() {
@@ -93,4 +95,11 @@ public class Question {
         this.answer = answer;
     }
 
+    public TaoTi getTaoTi() {
+        return taoTi;
+    }
+
+    public void setTaoTi(TaoTi taoTi) {
+        this.taoTi = taoTi;
+    }
 }

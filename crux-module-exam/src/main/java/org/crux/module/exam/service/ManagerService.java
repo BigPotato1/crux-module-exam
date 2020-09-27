@@ -29,12 +29,19 @@ public class ManagerService {
         managerDao.updateManager(manager);
     }
 
+    //查询管理员的个人信息
     public Manager selectManager(int id) {
         return managerDao.selectManager(id);
     }
 
-    public List<Manager> list(int start,int count) {
-        return managerDao.list(start,count);
+//    public List<Manager> list(int start,int count) {
+//        return managerDao.list(start,count);
+//    }
+
+    //查询所有管理员的信息
+    public List<Manager> listManager() {
+        return managerDao.listManager();
     }
+
 
 }

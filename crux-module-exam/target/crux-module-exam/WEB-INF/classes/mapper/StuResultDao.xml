@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.crux.module.exam.dao.StuResultDao">
+    
+    <resultMap id="stuResultMap" type="org.crux.module.exam.entity.StuResult">
+        <id column="id" property="id" />
+        <result column="resSingle" property="resSingle" />
+        <result column="resMore" property="resMore" />
+        <result column="resTotal" property="resTotal" />
+
+        <association property="student" javaType="org.crux.module.exam.entity.Student">
+            <result column="name" property="name"/>
+        </association>
+
+        <association property="taoTi" javaType="org.crux.module.exam.entity.TaoTi">
+            <result column="nameT" property="nameT"/>
+        </association>
+    </resultMap>
+
+    <select id="listStuResult" resultMap="stuResultMap">
+        select student.name,taoti.nameT,sturesult.id,sturesult.resSingle,sturesult.resMore,sturesult.resTotal from
+            student,taoti,sturesult where student.id=sturesult.studentId and taoti.id=sturesult.taoTiID
+    </select>
+</mapper>

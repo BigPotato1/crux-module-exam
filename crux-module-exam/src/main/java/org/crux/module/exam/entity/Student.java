@@ -2,16 +2,16 @@ package org.crux.module.exam.entity;
 
 public class Student {
 
-    private int ID;			//考生ID号
+    private int id;			//考生ID号
     private String pwd;		//登录密码
     private String name;	//考生名称
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getPwd() {

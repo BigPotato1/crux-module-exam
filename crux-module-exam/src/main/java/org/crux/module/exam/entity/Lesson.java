@@ -4,16 +4,16 @@ import java.util.Date;
 
 public class Lesson {
 
-    private int ID;   //课程ID号
+    private int id;   //课程ID号
     private String name;   //课程名称
     private Date joinTime;
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
