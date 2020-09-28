@@ -14,10 +14,15 @@ import java.util.List;
 public interface StudentDao {
 
     int getTotal();
+
     void addStudent(Student student);
+
     void deleteStudent(int id);
+
     void updateStudent(Student student);
+
     Student selectStudent(String name);
+
     List<Student> listStudent();
 
 }

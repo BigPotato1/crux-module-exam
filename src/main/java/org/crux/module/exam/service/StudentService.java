@@ -1,7 +1,6 @@
 package org.crux.module.exam.service;
 
 import org.crux.module.exam.dao.StudentDao;
-import org.crux.module.exam.entity.Manager;
 import org.crux.module.exam.entity.Student;
 import org.springframework.stereotype.Service;
 
