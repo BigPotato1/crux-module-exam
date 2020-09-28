@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 设置为ManagerDao接口方法提供sql语句配置 -->
+<mapper namespace="org.crux.module.exam.dao.ManagerDao">
+
+<!--    <resultMap id="manager" type="manager">-->
+<!--        <id column="id" property="id"/>-->
+<!--        <result column="pwd" property="pwd"/>-->
+<!--        <result column="name" property="name"/>-->
+<!--    </resultMap>-->
+
+    <!-- id="方法名“ ；resultType=”返回值类型“ ；parameterType=”输入参数类型“-->
+
+    <!-- 查询数据总条目 -->
+    <select id="getTotal" resultType="int">
+            SELECT COUNT(*) FROM manager
+    </select>
+
+    <!-- 增加一条数据 -->
+    <insert id="addManager" parameterType="Manager">
+        INSERT INTO manager VALUES(#{id}, #{pwd}, #{name})
+    </insert>
+
+    <!-- 删除一条数据 -->
+    <delete id="deleteManager" parameterType="int">
+        DELETE FROM manager WHERE id = #{id}
+    </delete>
+
+    <!-- 更新一条数据 -->
+    <update id="updateManager" parameterType="Manager">
+        UPDATE manager SET id = #{id}, pwd = #{pwd},
+                           name = #{name} WHERE id = #{id}
+    </update>
+
+    <!-- 查询一条数据 -->
+    <select id="selectManager" resultType="Manager" parameterType="int">
+        SELECT * FROM manager WHERE id =#{id}
+    </select>
+
+<!--    &lt;!&ndash; 查询从start位置开始的count条数据&ndash;&gt;-->
+<!--    <select id="list" resultMap="manager">-->
+<!--        SELECT * FROM manager ORDER BY id desc limit #{param1}, #{param2}-->
+<!--    </select>-->
+
+    <!-- 查询全部管理员相关数据-->
+    <!-- 此处的单表查询用“resultType”更简洁-->
+<!--    <select id="listManager" resultMap="manager">-->
+    <select id="listManager" resultType="manager">
+        <!--SELECT * FROM manager ORDER BY id desc-->
+        SELECT * FROM manager ORDER BY id
+    </select>
+
+</mapper>
