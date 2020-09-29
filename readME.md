@@ -1,7 +1,7 @@
 ##描述
 用idea结合maven搭建的一个简单SSM实例，也就是SpringMVC + Spring + MyBatis
 
-详细可参考我的博客地址：
+本项目参考的资料如下：
 
 博客园：https://www.cnblogs.com/yeya/p/10320885.html
 
@@ -11,5 +11,7 @@ CSDN：https://blog.csdn.net/yeyazhishang/article/details/86650053
 
 简书：https://www.jianshu.com/p/e09adeba30d9
 
-程序启动后自动访问index页面：http://localhost:8080/mvcDemo_master_war_exploded/
-显示数据库地址：http://localhost:8080/mvcDemo_master_war_exploded/user/select
+注意，用idea部署项目时，在配置tomcat时，里面的“Application context”一项应删除默认的，留空，如果不留空，在index页面再点击登录时，
+会访问到http://localhost:8080/crux-module-exam_war_exploded/Manager
+而真正的登录URL是：http://localhost:8080/Manager
+因此就会出现：404，访问资源不存在  的提示
