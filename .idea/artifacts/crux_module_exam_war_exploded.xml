@@ -44,7 +44,8 @@
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.1.10" />
           <element id="file-copy" path="$MAVEN_REPOSITORY$/javax/servlet/jstl/1.2/jstl-1.2.jar" output-file-name="javax.servlet-jstl-1.2.jar" />
           <element id="library" level="project" name="Maven: javax.annotation:javax.annotation-api:1.2" />
-          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.47" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.16" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.6.1" />
           <element id="file-copy" path="$MAVEN_REPOSITORY$/jstl/jstl/1.2/jstl-1.2.jar" output-file-name="jstl-jstl-1.2.jar" />
           <element id="library" level="project" name="Maven: taglibs:standard:1.1.2" />
         </element>
